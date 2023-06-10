@@ -36,9 +36,9 @@ const App = () => {
                 flexDirection: "column",
             }}
         >
+            <Footer />
             <Header darkMode={darkMode} users={users} />
             <Container users={users} />
-            <Footer />
         </div>
     );
 };
