@@ -1,25 +1,12 @@
 import React from "react";
-// import { Component } from "react";
-import Counter from "../Counter";
-// import Counter2 from "components/Counter/Counter";
-import UsersList from "../UsersList";
-//Импорт с Индекс файлов
+import { Routes, Route, Outlet } from "react-router-dom";
+
+import Blogs from "../../pages/Blogs";
+import Contact from "../../pages/Contact";
+import Home from "../../pages/Home";
+import { PrivateRoute } from "../../hoc/PrivateRoute";
 
 class Container extends React.Component {
-    renderList = (list) => {
-        return list.map((elem) => {
-            return (
-                <div key={elem.id}>
-                    <h2>Name: {elem.name}</h2>
-                </div>
-            );
-        });
-    };
-
-    handleClick = (e, users) => {
-        console.log("click", e, users);
-    };
-
     render() {
         return (
             <div
@@ -27,8 +14,9 @@ class Container extends React.Component {
                     flexGrow: 1,
                 }}
             >
-                <UsersList />
-                {/* <Counter /> */}
+                <div>
+                    <Outlet />
+                </div>
             </div>
         );
     }

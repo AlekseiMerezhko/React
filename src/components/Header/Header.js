@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = (props) => {
     return (
         <div
@@ -8,7 +10,44 @@ const Header = (props) => {
                 color: "white",
             }}
         >
-            Login
+            <ul
+                style={{
+                    display: "flex",
+                    gap: "10px",
+                    listStyleType: "none",
+                }}
+            >
+                <li>
+                    <Link
+                        to="/"
+                        style={{
+                            color: "white",
+                        }}
+                    >
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="blogs"
+                        style={{
+                            color: "white",
+                        }}
+                    >
+                        Blog
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="contact"
+                        style={{
+                            color: "white",
+                        }}
+                    >
+                        Contact
+                    </Link>
+                </li>
+            </ul>
         </div>
     );
 };
