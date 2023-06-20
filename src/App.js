@@ -4,10 +4,13 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Container from "./components/Container/Container";
 import { USERS } from "./constants";
+import { useTasks } from "./Context";
 
 const App = () => {
     const darkMode = false;
+    const tasks = useTasks();
 
+    console.log(tasks);
     return (
         <div
             style={{

@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { Component, PureComponent } from "react";
 
-class Counter extends Component {
+class Counter extends PureComponent {
     state = { value: 0, users: ["a", "b"] };
 
     incrementValue = () => {

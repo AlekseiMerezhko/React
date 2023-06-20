@@ -47,6 +47,16 @@ const Header = (props) => {
                         Contact
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="comments"
+                        style={{
+                            color: "white",
+                        }}
+                    >
+                        Comments
+                    </Link>
+                </li>
             </ul>
         </div>
     );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
@@ -6,9 +6,10 @@ import "./index.css";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
+import Comments from "./pages/Comments";
+import { TasksProvider } from "./Context";
 
 const someList = [];
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -27,10 +28,18 @@ const router = createBrowserRouter([
                 path: "/blogs",
                 element: <Blogs />,
             },
+            {
+                path: "/comments",
+                element: <Comments />,
+            },
         ],
     },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={router} />);
+root.render(
+    <TasksProvider>
+        <RouterProvider router={router} />
+    </TasksProvider>
+);
