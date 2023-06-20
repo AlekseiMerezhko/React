@@ -5,12 +5,13 @@ import Footer from "./components/Footer/Footer";
 import Container from "./components/Container/Container";
 import { USERS } from "./constants";
 import { useTasks } from "./Context";
+import { useOnlineStatus } from "./hooks/useOnlineStatus";
 
 const App = () => {
     const darkMode = false;
     const tasks = useTasks();
-
-    console.log(tasks);
+    const status = useOnlineStatus();
+    console.log(status);
     return (
         <div
             style={{

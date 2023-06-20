@@ -1,31 +1,19 @@
-import { Component, Fragment } from "react";
+const Input = ({ handleChange, value, error, type, height, styles }) => {
+    return (
+        <div>
+            {value.error && <span>{value.error}</span>}
 
-class Input extends Component {
-    state = {};
-
-    componentDidMount() {
-        // console.log("componentDidMount");
-        // this.interval = setTimeout(() => {
-        //     console.log("interval");
-        // }, 5000);
-    }
-    componentDidUpdate(prevProps, prevState) {
-        // console.log("componentDidUpdate");
-    }
-    componentWillUnmount() {
-        // clearInterval(this.interval);
-    }
-    // shouldComponentUpdate(nextProps, nextState) {}
-
-    render() {
-        // console.log("render");
-        return (
             <input
-                onChange={this.props.handleChange}
-                value={this.props.value}
+                onChange={handleChange}
+                value={value}
+                accesabilityLabels
+                className={type === "primary" ? "red" : "blue"}
+                height={height}
+                type="text"
+                style={{ ...styles }}
             />
-        );
-    }
-}
-
+        </div>
+    );
+};
+const styles = {};
 export default Input;

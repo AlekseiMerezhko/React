@@ -5,7 +5,7 @@ const Comments = ({ entities = [] }) => {
 
     return (
         <ul>
-            {entities.map((comment) => (
+            {values.map((comment) => (
                 <li key={comment.id}>
                     <h3>{comment.name}</h3>
                     <p>{comment.body}</p>

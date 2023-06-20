@@ -14,15 +14,16 @@ function reducer(state, action) {
                 age: state.age,
             };
         }
+        default: {
+            console.log("first");
+        }
     }
-    
     throw Error("Unknown action: " + action.type);
 }
 
 const initialState = { name: "Taylor", age: 42 };
 
 export default function Form() {
-
     const [state, dispatch] = useReducer(reducer, initialState);
 
     function handleButtonClick() {
