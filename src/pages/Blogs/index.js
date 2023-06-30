@@ -29,12 +29,3 @@ const Blogs = (props) => {
 };
 
 export default memo(Blogs);
-
-
-
-const Button = () => {
-    
-    return <button>
-        Button
-    </button>
-}

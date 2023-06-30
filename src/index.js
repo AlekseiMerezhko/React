@@ -7,6 +7,9 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
 import Comments from "./pages/Comments";
+import ErrorTest from "./pages/ErrorTest";
+import Forms from "./pages/Forms";
+
 import { TasksProvider } from "./Context";
 
 const someList = [];
@@ -20,18 +23,26 @@ const router = createBrowserRouter([
                 element: <Home />,
                 children: [],
             },
-            {
-                path: "/contact",
-                element: <Contact />,
-            },
-            {
-                path: "/blogs",
-                element: <Blogs />,
-            },
-            {
-                path: "/comments",
-                element: <Comments />,
-            },
+            // {
+            //     path: "/contact",
+            //     element: <Contact />,
+            // },
+            // {
+            //     path: "/blogs",
+            //     element: <Blogs />,
+            // },
+            // {
+            //     path: "/comments",
+            //     element: <Comments />,
+            // },
+            // {
+            //     path: "/error",
+            //     element: <ErrorTest />,
+            // },
+            // {
+            //     path: "/forms",
+            //     element: <Forms />,
+            // },
         ],
     },
 ]);

@@ -1,4 +1,4 @@
-const Input = ({ handleChange, value, error, type, height, styles }) => {
+export const Input = ({ handleChange, value, error, type, height, styles }) => {
     return (
         <div>
             {value.error && <span>{value.error}</span>}
@@ -6,7 +6,6 @@ const Input = ({ handleChange, value, error, type, height, styles }) => {
             <input
                 onChange={handleChange}
                 value={value}
-                accesabilityLabels
                 className={type === "primary" ? "red" : "blue"}
                 height={height}
                 type="text"
@@ -15,5 +14,3 @@ const Input = ({ handleChange, value, error, type, height, styles }) => {
         </div>
     );
 };
-const styles = {};
-export default Input;
