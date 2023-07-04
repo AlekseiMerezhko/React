@@ -35,7 +35,6 @@ class Container extends React.Component {
                 }}
             >
                 <div>
-
                     <Outlet />
                 </div>
             </div>

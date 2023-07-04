@@ -1,18 +1,14 @@
 import React, { createContext } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
 import App from "./App";
 import "./index.css";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
-import Blogs from "./pages/Blogs";
-import Comments from "./pages/Comments";
-import ErrorTest from "./pages/ErrorTest";
-import Forms from "./pages/Forms";
-
-import { TasksProvider } from "./Context";
+import { store } from "store";
 
 const someList = [];
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -50,7 +46,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <TasksProvider>
+    <Provider store={store}>
         <RouterProvider router={router} />
-    </TasksProvider>
+    </Provider>
 );
